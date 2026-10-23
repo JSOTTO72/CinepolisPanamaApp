@@ -2,27 +2,30 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cinepolis Panama</title>
     <script>
         window.onload = function() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
             
-            // Si el usuario tiene un iPhone, iPad o iPod
+            // Detección estricta de dispositivos Apple (iPhone, iPad, iPod)
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                window.location.href = "https://apple.com";
+                window.location.href = "https://apps.apple.com/us/app/cinepolis-panama/id6754109931";
             } 
-            // Si el usuario tiene un dispositivo Android
+            // Detección estricta de dispositivos Android
             else if (/android/i.test(userAgent)) {
-                window.location.href = "https://google.com";
+                window.location.href = "https://play.google.com/store/apps/details?id=com.cinepolis.bp.pa&hl=es_PA";
             } 
-            // Si entra desde una computadora u otro dispositivo, lo mandamos a Google Play por defecto
+            // Si entran desde PC, Mac de escritorio o cualquier otro dispositivo
             else {
-                window.location.href = "https://google.com";
+                window.location.href = "https://play.google.com/store/apps/details?id=com.cinepolis.bp.pa&hl=es_PA";
             }
         }
     </script>
 </head>
-<body>
-    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">Redirigiendo a la tienda de aplicaciones...</p>
+<body style="margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; height: 100vh; font-family: sans-serif; background-color: #f4f4f9;">
+    <div style="text-align: center;">
+        <p style="font-size: 18px; color: #333; font-weight: bold;">Redirigiendo a la tienda de aplicaciones...</p>
+    </div>
 </body>
 </html>
