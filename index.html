@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cinepolis Panama</title>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Si el usuario tiene un iPhone, iPad o iPod
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apple.com";
+            } 
+            // Si el usuario tiene un dispositivo Android
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://google.com";
+            } 
+            // Si entra desde una computadora u otro dispositivo, lo mandamos a Google Play por defecto
+            else {
+                window.location.href = "https://google.com";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px;">Redirigiendo a la tienda de aplicaciones...</p>
+</body>
+</html>
